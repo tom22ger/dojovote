@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>DojoVote</title>
+		<link rel="stylesheet" href="dojoStyle.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script src="utilities.js"></script>
+		<script src="Fighter.js"></script>
+		<script src="Dojo.js"></script>
+		<script src="display.js"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				fetchDojo();
+			});
+		</script>
+		<script>
+			window.addEventListener('unload', function() {
+				sendResults();
+			});
+		</script>
+	</head>
+	<body>
+		<div id="universals">
+			<div id="settingsDialog" class="dialog"></div>
+			<div id="shareDialog" class="dialog">
+				<h1 id="shareTitle"></h1>
+				<span id="shareCode"></span><br>
+				<!--<button id="copyButton" onclick="copyLink()"> 
+					<i class="material-icons copy">file_copy</i>
+				</button> -->
+			</div>
+			<div id="dnfDialog" class="dialog">
+				<h1>UhOh!</h1>We couldn't find a Dojo at that address
+			</div>
+			<div id="helpDialog" class="dialog">
+				<h1>Help</h1><p>Use the left and right arrow keys to choose the winning side.</p>
+				<p>Clicking on the Star Button will automatically send that item to the highest available spot on your list.</p>
+			</div>
+			<div id="smokescreen" onclick="hideDialog()"></div>
+		</div>
+		<div id="topMenu" class="menu">
+			<span id="floatMenu"><div id="title">
+				Title
+				</div>
+				<button id="shareButton" onclick="showDialog('shareDialog')"> 
+					<i class="material-icons share">share</i>
+				</button>
+			</span>
+			<button id="expandButton"  onclick="toggleMenu()">
+				<div id="expandIcon"></div>
+			</button>
+			<div id="rankingsBlock">
+				<button id="personalTab" class="rankTab" onclick="showPersonal()">
+					<i class="material-icons person tabIcon">person</i>
+				</button>
+				<button id="globalTab" class="rankTab" onclick="showGlobal()">
+					<i class="material-icons public tabIcon">public</i>
+				</button>
+				<div id="personalRankings" class="rankings">
+					<h2>Your Rankings</h2>
+					<ol id="personalList" class="list">
+
+					</ol>
+				</div>
+				<div id="globalRankings" class="rankings">
+					<h2>Global Rankings</h2>
+					<ol id="globalList" class="list">
+
+					</ol>
+				</div>
+			</div>
+			<button id="settings" class="bottomButton" onclick="showDialog('settingsDialog')">
+				<i class="material-icons settings">settings</i>
+			</button>
+			<button id="help" class="bottomButton" onclick="showDialog('helpDialog')">
+				<i class="material-icons help">help</i>
+			</button>
+			<a href="index.html" id="home"><img src="Assets/Logo.svg" id="logo"></a>
+		</div>
+		<div id="left" class="side">	
+			<button id="leftFav" class="favButton clickable" onclick="personalDojo.favorite(LEFT)">
+				<i class="material-icons star" id="leftFav">star</i>
+			</button>
+			<div id="leftblock" class="block clickable" onclick="personalDojo.fight(LEFT)">
+
+			</div>
+
+		</div>
+		<div id="right" class="side">
+			<button id="rightFav" class="favButton clickable" onclick="personalDojo.favorite(RIGHT)">
+				<i class="material-icons star" id="rightFav">star</i>
+			</button>
+			<div id="rightblock" class="block clickable" onclick="personalDojo.fight(RIGHT)">
+
+			</div>
+
+		</div>
+
+	</body>
+</html>

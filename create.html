@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>DojoVote</title>
+		<link rel="stylesheet" href="createStyle.css">
+		<link rel="create_dojo" href="create_dojo.php">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script src="create.js"></script>
+		<script src="utilities.js"></script>
+	</head>
+	<body>
+		<h1 id="header"><img src="Assets/Logo.svg"></h1>
+		<form id="dojoForm" autocomplete="off" action="create_dojo.php" target="_self" method="post" target="_self">
+			<input type="text" id="titleField" placeholder="Title" name="title" oninput="checkSubmit()" onchange="checkSubmit()">
+			<div id="titleUnderline"></div>
+			<div id="fighterList">
+				<div id="addedFighters">
+					<input type="text" class="fighterSlot" id="f1" name="fighter[]" oninput="checkSubmit()" onchange="checkSubmit()">
+					<input type="text" class="fighterSlot" id="f2" name="fighter[]" oninput="checkSubmit()" onchange="checkSubmit()">
+				</div>
+				<div class="fighterSlot" id="addFighterButton" onclick="addFighterSlot()">+</div>
+			</div>
+			<input type="submit" id="submitButton" value="Open Dojo!" disabled>
+		</form>
+	</body>
+</html>
