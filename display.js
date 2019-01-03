@@ -100,6 +100,7 @@ function hideDialog() {
 	for (var i = 0; i < dialogs.length; i++) {
 		dialogs[i].style.zIndex = -1;
 	}
+	refreshSettings();
 
 }
 
@@ -210,6 +211,15 @@ function showPersonal() {
 	glist.style.zIndex = 4;
 }
 
+function refreshSettings() {
+	if (document.getElementById("animations").checked) {
+		animations = true;
+	}
+	else {
+		animations = false;
+	}
+}
+
 function showGlobal() {
 	var ptab = document.getElementById("personalTab");
 	var plist = document.getElementById("personalRankings");
@@ -281,7 +291,7 @@ function displayFighter(pos, fighter, wl, end) {
 
 	deleteTrash(winloseClass);
 
-	if (animations == true && wl != -1) {
+	if (animations && wl != -1) {
 		var div = document.getElementById(block);
 		var oldBlock = div.cloneNode(true); 
 		oldBlock.id = winloseId;

@@ -50,10 +50,15 @@ function backspaceBehav() {
 		previousSlot.focus();
 		previousSlot.scrollIntoView();
 	}
+	else if (active.className == "fighterSlot" && active.value == "" && active.id == "f2") {
+		var previousSlot = document.getElementById("f1");
+		previousSlot.focus();
+		previousSlot.scrollIntoView();
+	}
 }
 
 function addFighterSlot() {
-	if (document.getElementById("f" + numSlots).value != "") {
+	/*if (document.getElementById("f" + numSlots).value != "") {
 		numSlots++;
 		var slot = document.createElement("input");
 		slot.classList = "fighterSlot";
@@ -63,7 +68,16 @@ function addFighterSlot() {
 		list.appendChild(slot);
 		slot.focus();
 		slot.scrollIntoView();
-	}
+	}*/
+	numSlots++;
+	var slot = document.createElement("input");
+	slot.classList = "fighterSlot";
+	slot.id = "f" + numSlots;
+	slot.name = "fighter[]";
+	var list = document.getElementById("addedFighters");
+	list.appendChild(slot);
+	slot.focus();
+	slot.scrollIntoView();
 }
 
 function checkSubmit() {

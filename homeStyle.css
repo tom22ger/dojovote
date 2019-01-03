@@ -58,8 +58,10 @@ section {
 #header {
 	color: white;
 	text-align: center;
-	font-size: 100px;
-	margin: 40px auto -10px auto;
+	margin: 40px auto;
+	display: block;
+	width: 90%;
+	max-width: 500px;
 }
 
 #createLink {
