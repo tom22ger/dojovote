@@ -12,6 +12,11 @@ html, body {
 	padding: 0;
 }
 
+body {
+	overflow-y: hidden;
+	position: relative;
+}
+
 button {
 	font: inherit;
 
@@ -373,8 +378,8 @@ a, a:link, a:visited {
 	margin-right: auto;
 	box-shadow: 0 10px 20px rgba(0,0,0,.19), 0 6px 6px rgba(0,0,0,.23);
 
-	height: 200px;
-	width: 500px;
+	width: 70%;
+	max-width: 500px;
 	border-radius: 5px;
 	background-color: #263238;
 	padding: 20px;
