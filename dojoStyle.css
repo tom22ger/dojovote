@@ -373,7 +373,7 @@ a, a:link, a:visited {
 .dialog {
 	position: fixed;
 	z-index: -1;
-	top: 30%;
+	top: 10%;
 	left: 0;
 	right: 0;
 	margin-left: auto;
@@ -382,12 +382,16 @@ a, a:link, a:visited {
 
 	width: 70%;
 	max-width: 500px;
+	max-height: 70%;
 	border-radius: 5px;
 	background-color: #263238;
 	padding: 20px;
 
 	color: #fff;
-	font-size: 24px;
+	font-size: 20px;
+	padding-bottom: 50px;
+	
+	overflow: scroll;
 }
 
 #shareDialog {
