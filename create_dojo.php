@@ -170,7 +170,7 @@ function alphaID($in, $to_num = false, $pad_up = false, $pass_key = null) {
 }
 
 
-$sql = "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = 'dojo_vote'";
+$sql = "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = 'dojovote'";
 $result = $conn->query($sql);
 $numTables = $result->fetch_row();
 
