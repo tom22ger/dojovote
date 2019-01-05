@@ -188,12 +188,12 @@ function sendResults() {
 function toggleMenu() {
 	if (menuExpanded) {
 		if (personalDojo.dojoState == OPEN) {
-			removeClass("topMenu","expanded");
+			removeClass("fullMenu","expanded");
 			menuExpanded = false;
 		}
 	}
 	else {
-		addClass("topMenu","expanded");
+		addClass("fullMenu","expanded");
 		menuExpanded = true;
 	}
 }

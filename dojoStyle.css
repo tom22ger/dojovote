@@ -55,7 +55,7 @@ a, a:link, a:visited {
 
 	color: #fff;
 	background-color: #13191c;
-	
+
 	cursor: pointer;
 }
 
@@ -118,11 +118,11 @@ a, a:link, a:visited {
 	color: #fff;
 }
 
-.menu {
+#topMenu {
 	line-height: 70px;
 
 	position: absolute;
-	z-index: 4;
+	z-index: 5;
 	top: 0;
 	right: 0;
 	left: 0;
@@ -131,18 +131,14 @@ a, a:link, a:visited {
 	overflow: hidden;
 
 	width: 80%;
-	height: 70px;
+	height: 55px;
 	margin-right: auto;
 	margin-left: auto;
 	padding-right: 20px;
 	padding-left: 20px;
 
-	transition: height 700ms;
-	transition-timing-function: ease;
-
-	border-radius: 0 0 10px 10px;
 	background-color: #263238;
-	box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+
 }
 
 #title {
@@ -211,10 +207,6 @@ a, a:link, a:visited {
 
 	border-radius: 2.5px;
 	background-color: #fff;
-}
-
-.menu.expanded {
-	height: 95%;
 }
 
 #rankingsBlock {
@@ -509,4 +501,34 @@ a, a:link, a:visited {
 	display: inline-flex;
 	height: 18px;
 	width: 18px;
+}
+
+#fullMenu {
+	position: absolute;
+
+	display: block;
+
+	z-index: 4;
+	top: calc(70px - 90%);
+	right: 0;
+	left: 0;
+
+	width: 80%;
+	height: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 20px;
+	padding-left: 20px;
+	border-radius: 0 0 10px 10px;
+
+	background-color: #263238;
+
+	box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+	
+	transition: transform 700ms;
+	transition-timing-function: ease;
+}
+
+#fullMenu.expanded {
+	transform: translateY(90%);
 }

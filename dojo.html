@@ -72,9 +72,8 @@
 					<i class="material-icons share">share</i>
 				</button>
 			</span>
-			<button id="expandButton"  onclick="toggleMenu()">
-				<div id="expandIcon"></div>
-			</button>
+		</div>
+		<div id="fullMenu" class="menu">
 			<div id="rankingsBlock">
 				<button id="personalTab" class="rankTab" onclick="showPersonal()">
 					<i class="material-icons person tabIcon">person</i>
@@ -85,7 +84,7 @@
 				<div id="personalRankings" class="rankings">
 					<h2>Your Rankings</h2>
 					<ol id="personalList" class="list">
-
+						
 					</ol>
 				</div>
 				<div id="globalRankings" class="rankings">
@@ -102,15 +101,16 @@
 				<i class="material-icons help">help</i>
 			</button>
 			<a href="/index" id="home"><img src="Assets/Logo.svg" id="logo"></a>
+			<button id="expandButton"  onclick="toggleMenu()">
+				<div id="expandIcon"></div>
+			</button>
 		</div>
 		<div id="left" class="side">	
 			<button id="leftFav" class="favButton clickable" onclick="personalDojo.favorite(LEFT)">
 				<i class="material-icons star" id="leftFav">star</i>
 			</button>
 			<div id="leftblock" class="block clickable" onclick="personalDojo.fight(LEFT)">
-
 			</div>
-
 		</div>
 		<div id="right" class="side">
 			<button id="rightFav" class="favButton clickable" onclick="personalDojo.favorite(RIGHT)">
