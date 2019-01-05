@@ -15,6 +15,7 @@ html, body {
 body {
 	overflow-y: hidden;
 	position: relative;
+	background-color: #13191c;
 }
 
 button {
@@ -56,8 +57,9 @@ a, a:link, a:visited {
 	box-sizing: border-box;
 	padding: 10px;
 
-	transition: transform 3s;
-	transition-timing-function: ease;
+	transition: transform 3s ease;
+	-webkit-transition: transform 3s ease;
+
 	text-align: center;
 
 	color: #fff;
@@ -87,6 +89,7 @@ a, a:link, a:visited {
 	margin-left: auto;
 
 	transition: box-shadow .3s cubic-bezier(.25,.8,.25,1);
+	-webkit-transition: box-shadow .3s cubic-bezier(.25,.8,.25,1);
 	text-align: center;
 
 	border-radius: 10px;
@@ -203,7 +206,6 @@ a, a:link, a:visited {
 
 .material-icons.expand {
 	font-size: 20px;
-
 	color: #fff;
 }
 
@@ -220,13 +222,13 @@ a, a:link, a:visited {
 	position: absolute;
 	right: 0;
 	left: 0;
-	top: 100px;
+	top: 10%;
+	bottom: 100px;
 
 	display: block;
 
 	width: 80%;
-	height: calc(100% - 200px);
-	margin-top: -10px;
+	margin-top: 10px;
 	margin-right: auto;
 	margin-left: auto;
 
@@ -242,7 +244,7 @@ a, a:link, a:visited {
 
 	box-sizing: border-box;
 	width: 50%;
-	height: 74px;
+	height: 70px;
 
 	text-align: center;
 
@@ -516,12 +518,13 @@ a, a:link, a:visited {
 	display: block;
 
 	z-index: 4;
-	top: calc(70px - 90%);
+	bottom: calc(100% - 70px);
 	right: 0;
 	left: 0;
 
 	width: 80%;
 	height: 90%;
+	min-height: 200px;
 	margin-right: auto;
 	margin-left: auto;
 	padding-right: 20px;
@@ -532,8 +535,7 @@ a, a:link, a:visited {
 
 	box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
 
-	transition: transform 700ms;
-	transition-timing-function: ease;
+	transition: transform 700ms ease;
 }
 
 #fullMenu.expanded {
